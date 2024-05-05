@@ -28,7 +28,6 @@
 import { ref, watch } from "vue";
 import router from "@/router";
 import login from "../../composables/login";
-import { useToast } from "vue-toast-notification";
 
 export default {
   name: "Login",
@@ -38,8 +37,6 @@ export default {
     const requiredPassword = ref(false);
     const email = ref("");
     const password = ref("");
-
-    const $toast = useToast({ position: "top-right" });
 
     watch(email, async () => {
       if (email.value) requiredEmail.value = false;

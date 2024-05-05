@@ -28,9 +28,10 @@ const routes = [
         component: () => import("../views/Article/Article.vue"),
       },
       {
-        path: "article-update",
+        path: "article-update/:slug",
         name: "ArticleUpdate",
         component: () => import("../views/Article/Article.vue"),
+        props: true,
       },
     ],
   },

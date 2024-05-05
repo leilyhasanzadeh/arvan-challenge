@@ -1,4 +1,5 @@
 <template>
+  <p class="loading" v-show="loading">loading...</p>
   <header class="article-header">
     <span class="content-title">All Posts</span>
   </header>
@@ -37,7 +38,9 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li>
-                  <router-link to="/dashboard/article-update">Edit</router-link>
+                  <router-link :to="'/dashboard/article-update/' + post.slug"
+                    >Edit</router-link
+                  >
                 </li>
                 <li>
                   <button
@@ -193,6 +196,7 @@ export default {
     };
 
     return {
+      loading,
       postList,
       postCount,
       pageSize,

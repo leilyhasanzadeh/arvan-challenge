@@ -1,3 +1,9 @@
+.loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .article-header {
   display: flex;
   justify-content: space-between;
@@ -202,4 +208,30 @@ table.table td {
   height: 100vh;
   display: flex;
   align-items: center;
+}
+
+.required-group label {
+  color: var(--brick);
+}
+
+.required-group input {
+  border-color: var(--brick);
+}
+
+.form-group .required {
+  display: none;
+}
+
+.required-group .required {
+  display: inline-block;
+  margin: 10px 19px 0 0;
+  font-family: "HelveticaNeue";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--brick);
 }

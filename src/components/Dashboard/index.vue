@@ -29,7 +29,7 @@
           </ul>
         </div>
       </aside>
-      <section class="col-10 content">
+      <section class="col-10 content position-relative">
         <router-view />
       </section>
     </main>
@@ -46,6 +46,8 @@ export default {
     const username = ref("");
 
     onMounted(async () => {
+      const token = localStorage.getItem("token");
+      if (!token) router.push({ name: "Login" });
       username.value = localStorage.getItem("username");
     });
 
